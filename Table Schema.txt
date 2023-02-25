@@ -1,0 +1,14 @@
+CREATE TABLE dbo.oltpstore (
+  id bigint IDENTITY,
+  eventguid varchar(50) NOT NULL,
+  
+  jsondata nvarchar(max) NULL,
+  jsonobjecttype varchar(50) NULL,
+  isactive bit NULL DEFAULT (1),
+  createdate datetime2 NULL DEFAULT (getdate()),
+  batch int NULL
+ 
+)
+ON [PRIMARY]
+TEXTIMAGE_ON [PRIMARY]
+GO
